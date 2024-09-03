@@ -50,14 +50,14 @@ Various version for Arduino 8Bits  under BetaEvents   https://github.com/net234/
 Various version for Arduino 32Bits  under BetaEvents32   https://github.com/net234/BetaEvents32
 Full rebuild    for ESP8266    https://github.com/net234/BetaEventsESP   (betaEvensESP V4.0) 25/04/2024
 
-07/06/24   V4.0C ajout de multi dans evHandlers 
-
+07/06/24   V4.0C add de multi in evHandlerButton 
+01/09/24   V4.1  add handler pour serial2
 
 */
 // Name of this application
 #ifndef APP_NAME
 // version de prod
-#define APP_NAME "betaEventsESP V4.0C"
+#define APP_NAME "betaEventsESP V4.1"
 #endif
 
 
@@ -171,6 +171,7 @@ void loop() {
       break;
 
     case evInChar:
+      TV_println("incharext", Events.ext);
       //DV_println(Events.cParam);
       switch (Events.cParam) {
         case '1': delay(10); break;

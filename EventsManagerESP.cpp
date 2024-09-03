@@ -207,24 +207,7 @@ bool EvManager::push(const uint8_t code, const int8_t ext, const int iParam) {
   event aEvent(code, ext, iParam);
   return (push(aEvent));
 }
-/*
-void EventManager::addHandleEvent(eventHandler_t* aHandler) {
-  eventHandler_t** ItemPtr = &handleEventList;
-  while (*ItemPtr) ItemPtr = &((*ItemPtr)->next);
-  *ItemPtr = aHandler;
-}
 
-//void   EventManager::addGetEvent(eventHandler_t* aHandler) {
-//  eventHandler_t** ItemPtr = &getEventList;
-//  while (*ItemPtr) ItemPtr = &((*ItemPtr)->next);
-//  *ItemPtr = aHandler;
-//}
-
-
-
-
-
-*/
 
 bool EvManager::forceDelayedPushMillis(const uint32_t delayMillisec, const uint8_t code, const uint8_t ext, const int iParam, bool repeat) {
   // delay millis   1min  100Hz 10 min  10Hz  1H30  1Hz  17H

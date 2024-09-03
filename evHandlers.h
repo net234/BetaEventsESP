@@ -41,6 +41,7 @@
     V2.3    09/03/2022   isolation of evHandler for compatibility with dual core ESP32
 
     V2.4    30/09/2022   Isolation des IO (evhandlerOutput)
+    01/09/24   V4.1  add handler pour serial2
 
     *************************************************/
 #pragma once
@@ -324,6 +325,7 @@ private:
   uint8_t inputStringSizeMax;
   bool stringComplete = false;
   bool stringErase = false;
+    friend class evHandlerSerial1;
 };
 
 

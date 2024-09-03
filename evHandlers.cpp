@@ -187,7 +187,7 @@ void evHandlerButton::handle() {
 
   //raz multi sur un relaché long
   if (Events.code == evCode and Events.ext == evxLongOff) multi = 0;  
-}
+  }
 
 #ifndef __AVR_ATtiny85__
 
